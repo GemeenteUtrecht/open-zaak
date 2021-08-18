@@ -1,6 +1,22 @@
 Changelog
 =========
 
+1.8.0-utrecht (2022-??-??)
+--------------------------
+
+**New features**
+
+* Added support for ``ZaakObject.objectTypeOverigeDefinitie``, so you can refer to
+  object type and object registrations that are not part of the standard while keeping
+  strict schema validation and retaining sufficient information for clients to visualize
+  the data.
+
+  ``ZaakObject.objectTypeOverigeDefinitie`` takes a URL pointing to the type definition,
+  a ``schema`` key which is a valid `jq <http://stedolan.github.io/jq/>`_ expression to
+  extract the JSON schema from the object type (currently only JSON schema is supported!)
+  and a ``objectData`` key which is also a valid ``jq`` expression pointing to the data
+  of the related object.
+
 1.8.0 (2022-09-??)
 ------------------
 
@@ -69,6 +85,9 @@ Fixed some issues discovered when upgrading from 1.6 or older
 * [#1227] Added missing OIO relation validation when using remote resources
 * [#1213] Add missing migration for Status.Meta changes
 * Fixed issue in migration order
+* Added support for modifying and deleting case characteristics (zaak eigenschappen).
+  However, only the value of the eigenschap can be changed, the link to the eigenschap or the link to
+  the zaak remain immutable.
 
 1.7.1 (2022-07-19)
 ------------------
@@ -264,7 +283,6 @@ The biggest changes are:
    .. code-block:: bash
 
        redis-cli flushall
-
 
 1.5.0 (2021-11-25)
 ------------------

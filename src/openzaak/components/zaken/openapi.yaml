@@ -4244,7 +4244,9 @@ paths:
       - zaken
       security:
       - JWT-Claims:
+<<<<<<< HEAD
         - zaken.lezen
+<<<<<<< HEAD
     put:
       operationId: zaakeigenschap_update
       summary: Werk een ZAAKEIGENSCHAP in zijn geheel bij.
@@ -4392,6 +4394,11 @@ paths:
       security:
       - JWT-Claims:
         - (zaken.bijwerken | zaken.geforceerd-bijwerken)
+=======
+=======
+        - (zaken.bijwerken | zaken.geforceerd-bijwerken)
+>>>>>>> 4672bae4... :memo: Updated Schema
+>>>>>>> a6378a59... :memo: Updated Schema
     parameters:
     - name: uuid
       in: path
