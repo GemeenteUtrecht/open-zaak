@@ -1,15 +1,32 @@
 Changelog
 =========
 
+1.5.0-utrecht (2021-??-??)
+------------------
+
+New features
+------------
+
+* Added support for ``ZaakObject.objectTypeOverigeDefinitie``, so you can refer to
+  object type and object registrations that are not part of the standard while keeping
+  strict schema validation and retaining sufficient information for clients to visualize
+  the data.
+
+  ``ZaakObject.objectTypeOverigeDefinitie`` takes a URL pointing to the type definition,
+  a ``schema`` key which is a valid `jq <http://stedolan.github.io/jq/>`_ expression to
+  extract the JSON schema from the object type (currently only JSON schema is supported!)
+  and a ``objectData`` key which is also a valid ``jq`` expression pointing to the data
+  of the related object.
+
 1.5.0 (2021-??-??)
 ------------------
 
 .. warning::
 
    Manual intervention required
-   
-  k8s the correct pod securityGroupContext needs to be specified and on plain Docker 
-  deploys the permissions of the volumes will probably have to be fixed. 
+
+  k8s the correct pod securityGroupContext needs to be specified and on plain Docker
+  deploys the permissions of the volumes will probably have to be fixed.
 
 
 1.4.0 (2021-04-30)
