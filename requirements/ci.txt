@@ -419,8 +419,6 @@ six==1.16.0
     #   furl
     #   isodate
     #   orderedmultidict
-    #   jsonschema
-    #   mozilla-django-oidc
     #   pyopenssl
     #   python-dateutil
     #   requests-mock

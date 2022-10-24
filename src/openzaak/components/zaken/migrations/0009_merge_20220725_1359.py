@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("zaken", "0005_zaakobject_object_type_overige_definitie"),
+        ("zaken", "0006_zaakobject_object_type_overige_definitie"),
         ("zaken", "0008_alter_status_options"),
     ]
 

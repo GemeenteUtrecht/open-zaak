@@ -4244,6 +4244,7 @@ paths:
       - zaken
       security:
       - JWT-Claims:
+        - zaken.lezen
     put:
       operationId: zaakeigenschap_update
       summary: Werk een ZAAKEIGENSCHAP in zijn geheel bij.
